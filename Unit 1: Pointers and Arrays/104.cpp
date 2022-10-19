@@ -14,7 +14,7 @@ void q1a(){
     cout << "Enter the array: ";
     for(int i = 0; i < n; i++) cin >> ptr[i];
     
-    cout << "Array: " << endl;
+    cout << "Array: ";
     for(int i = 0; i < n; i++) cout << ptr[i] << " ";
     
     cout << endl << endl;
@@ -33,7 +33,7 @@ void q1b(){
     cout << "Enter the array: ";
     for(int i = 0; i < n; i++) cin >> ptr[i];
     
-    cout << "Array in reverse order: " << endl;
+    cout << "Array in reverse order: ";
     for(int i = n-1; i >= 0; i--) cout << ptr[i] << " ";
     
     cout << endl << endl;
@@ -49,12 +49,15 @@ void q1c(){
     
     ptr = new int[n];
     
+    cout << "Random array: ";
+    
     for(int i = 0; i < n; i++){
         ptr[i] = rand() % 50 + 1;
+        cout << ptr[i] << " ";
         sum += ptr[i];
     }
     
-    cout << "Sum of elements: " << sum << endl << endl;
+    cout << endl << "Sum of elements: " << sum << endl << endl;
     delete[] ptr;
 }
 
@@ -95,8 +98,6 @@ void q1d(){
 }
 
 int main() {
-    ios_base::sync_with_stdio(false); cin.tie(0); cout.tie(0);
-    
     srand(time(NULL));
     
     q1a();

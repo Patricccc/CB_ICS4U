@@ -81,7 +81,7 @@ void q1d(){
     }
     
     cout << "Enter 2nd array: ";
-    for(int i = 0; i < n2; i++){
+    for(int i = n1; i < n; i++){
         cin >> ptr2[i];
         ptr[i] = ptr2[i];
     }

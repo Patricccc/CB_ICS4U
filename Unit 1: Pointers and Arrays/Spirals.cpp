@@ -1,10 +1,8 @@
-#include <iostream>
-#include <cmath>
+#include <bits/stdc++.h>
 
 using namespace std;
 
 int main(){
-    ios_base::sync_with_stdio(false); cin.tie(0); cout.tie(0);
     int start, end;
     cin >> start >> end;
     
@@ -51,14 +49,22 @@ int main(){
             j++;
         }
     }
+    
+    bool first[dim] = {false};
 
     for(int i = 0; i < dim; i++){
         for(int j = 0; j < dim; j++){
             if(grid[i][j] != 0){
-                if(grid[i][j] < 10) cout << " " << grid[i][j] << " ";
-                else cout << grid[i][j] << " ";
+                if(!first[i]){
+                    first[i] = true;
+                    cout << grid[i][j];
+                }
+                else if(grid[i][j] < 10 && (j == 0 || j == dim - 1)) cout << " " << grid[i][j];
+                else if(grid[i][j] < 10) cout << "  " << grid[i][j];
+                else if(j == 0) cout << grid[i][j];
+                else cout << " " << grid[i][j];
             }
-            else if(grid[i][j] == 0 && j == 0) continue;
+            else if(grid[i][j] == 0 && (j == 0 || j == dim - 1)) continue;
             else cout << "   ";
         }
         cout << endl;

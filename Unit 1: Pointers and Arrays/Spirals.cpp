@@ -1,10 +1,16 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <cmath>
 
 using namespace std;
 
 int main(){
     int start, end;
     cin >> start >> end;
+    
+    if(start == end){
+        cout << start << endl;
+        return 0;
+    }
     
     int dim = floor(sqrt(end - start)) + 1;
     int middle = ceil(dim/2.0) - 1;

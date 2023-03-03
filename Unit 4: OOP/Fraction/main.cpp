@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 #include "Fraction.cpp"
+#include "Fraction.h"
 
 using namespace std;
 
@@ -26,10 +27,13 @@ int main(){
     f2.divide(f1);
     f2.print();
 
-    cout << "Addition: " << Fraction::add(Fraction(1,2), Fraction(1,3)).toString() << endl;
-    cout << "Subtraction: " << Fraction::subtract(Fraction(1,2), Fraction(1,3)).toString() << endl;
-    cout << "Multiplication: " << Fraction::multiply(Fraction(1,2), Fraction(1,3)).toString() << endl;
-    cout << "Division: " << Fraction::divide(Fraction(1,2), Fraction(1,3)).toString() << endl;
+    Fraction f3 = Fraction(1,2);
+    Fraction f4 = Fraction(1,3);
+
+    cout << "Addition: " << Fraction::add(f3, f4).toString() << endl;
+    cout << "Subtraction: " << Fraction::subtract(f3, f4).toString() << endl;
+    cout << "Multiplication: " << Fraction::multiply(f3, f4).toString() << endl;
+    cout << "Division: " << Fraction::divide(f3, f4).toString() << endl;
 
     return 0;
 }
